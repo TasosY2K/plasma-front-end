@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Navbar from '@/components/Navbar'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    'Navbar': Navbar
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Krona One', sans-serif;
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  background-attachment: fixed;
+}
+
+input, textarea, select, button { font-family:inherit; }
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
