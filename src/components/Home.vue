@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1 class="orange-shadow" style="font-size: 4vw">Plasma</h1>
-    <h3 class="orange-shadow">The free IOT search engine</h3>
+    <h1 class="header1 center">Plasma</h1>
+    <h3 class="header1">The free IOT search engine</h3>
     <p>Discover devices from all around the world and witness<br> the beauty of 21st century's interconnectedness firsthand</p>
     <p>Straigh forward and easy to use interface</p>
     <p style="margin-bottom: 70px">No sign up. No fees. 100% Open source</p>
@@ -22,9 +22,9 @@ export default {
   margin-top: 5%;
 }
 
-.orange-shadow {
+.header1 {
   text-shadow: 3px 3px #000000;
-  font-size: 3vw;
+  font-size: 3.5vw;
 }
 
 .explore-btn {
@@ -51,4 +51,9 @@ export default {
   transition: all 0.3s ease 0s;
 }
 
+@media screen and (max-width: 500px) {
+  .header1 {
+    font-size: 6vw;
+  }
+}
 </style>

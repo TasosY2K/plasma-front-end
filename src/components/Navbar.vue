@@ -55,11 +55,11 @@ export default {
   text-decoration: none;
   font-size: 17px;
   transition-duration: 0.3s;
+  border-bottom: transparent 3px solid;
 }
 
 .topnav a:hover {
-  color: rgb(0, 148, 247);
-  transform: translateY(2px);
+  border-bottom: 3px solid rgb(0, 148, 247);
 }
 
 .topnav .icon {
@@ -111,6 +111,11 @@ export default {
   .topnav a.icon {
     float: right;
     display: block;
+  }
+  .topnav a {border: none;}
+  .topnav a:hover {
+    border: none;
+    background-color: teal;
   }
 }
 

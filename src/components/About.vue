@@ -1,6 +1,6 @@
 <template>
   <div class="temp">
-    <h1>Page under construction</h1>
+    <h1 class="header">Page under construction</h1>
   </div>
 </template>
 
