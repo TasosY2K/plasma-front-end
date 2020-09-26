@@ -3,7 +3,7 @@
         <h1 style="color: #fff">Search: {{ this.$route.query.term }}</h1>
         <div class="search-container">
             <div class="card" v-for="i in info" :key="i.id">
-                <img v-bind:src="'http://localhost:3000/devices/img/' + i.id">
+                <img v-bind:src="'http://localhost/devices/img/' + i.id">
                 <div class="container">
                     <h3>{{ i.title }}</h3>
                     <p><a class="ip-link" target="_blank" v-bind:href="'http://' + i.ip_address">{{ i.ip_address }}</a>&nbsp;&nbsp;<span class="status">{{ i.status_code }}</span></p>
@@ -26,9 +26,9 @@ export default {
     }
   },
   mounted () {
-    console.log('http://localhost:3000/devices/search/title/' + this.$route.query.term)
+    console.log('http://localhost/devices/search/title/' + this.$route.query.term)
     axios
-      .get('http://localhost:3000/devices/search/title/' + this.$route.query.term)
+      .get('http://localhost/devices/search/title/' + this.$route.query.term)
       .then(response => (this.info = response.data.reverse()))
   }
 }
